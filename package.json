@@ -1,0 +1,20 @@
+{
+  "name": "trie",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Dictionary.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edison-cy-yang/dictionary-trie.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/edison-cy-yang/dictionary-trie/issues"
+  },
+  "homepage": "https://github.com/edison-cy-yang/dictionary-trie#readme",
+  "dependencies": {}
+}

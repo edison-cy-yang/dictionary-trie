@@ -1,5 +1,13 @@
 const TreeNode = require('./TreeNode');
-const util = require('util')
+
+const fs = require('fs');
+const readline = require('readline');
+const stream = require('stream');
+const instream = fs.createReadStream('./short_word.txt');
+const outstream = new stream;
+const rl = readline.createInterface(instream, outstream);
+
+const util = require('util');
 
 class Dictionary {
   
@@ -44,7 +52,7 @@ class Dictionary {
     } 
 
     if (node !== null && node.isWord) {
-      console.log("this is a word");
+      console.log("This is a word");
       return true;
     } else {
       console.log("This is not a word");
@@ -54,6 +62,12 @@ class Dictionary {
 }
 
 const dictionary = new Dictionary();
-dictionary.insert("string");
 
-dictionary.search("string"); //should output true
+
+rl.on('line', (line) => {
+  dictionary.insert(line);
+});
+
+rl.on('close', () => {
+  console.log(dictionary.search('aardvarks'));
+});
